@@ -19,6 +19,8 @@
 #define XT_ALIGN(s) (((s) + (__alignof__(struct _xt_align)-1))	\
 					& ~(__alignof__(struct _xt_align)-1))
 
+
+
 /* 枚举规则解析状态机的当前状态 */
 enum {
 	ADDR_OK	= (1<<0),
@@ -39,6 +41,9 @@ static const struct option static_2_way_nat_tg_opts[] = {
 	{.name = "dev", .has_arg = true, .val = 'd'},
 	{},
 };
+
+
+
 
 static void static_2_way_nat_tg_help(void)
 {

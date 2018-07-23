@@ -22,6 +22,9 @@
 #include <linux/module.h>
 #include <linux/skbuff.h>
 #include <linux/ctype.h>
+
+#include <linux/inet.h>
+
 #include <net/ip.h>
 #include <net/netfilter/nf_conntrack.h>
 
@@ -102,6 +105,7 @@ struct hlist_head *src_list;
 
 /* 保存DNAT映射 */
 struct hlist_head *dst_list;
+
 
 /*
  * 用一个IP地址(对于PREROUTING是daddr，对于POSTROUTING是saddr)作为key来获取value。
